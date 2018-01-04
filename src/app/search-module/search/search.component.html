@@ -1,0 +1,11 @@
+<div class="search-title col-6 col-centered">
+  <h1>Enter your search terms!</h1>
+  <div class="rule"></div>
+</div>
+
+<div class="search-box col-6 col-centered">
+  <form (ngSubmit)="doSearch()">
+    <input type="text" name="searchTerms" class="form-control" [(ngModel)]="searchString" placeholder="enter your search terms">
+  </form>
+  <button type="button" class="search-button btn btn-primary" (click)="doSearch()">Search</button>
+</div>

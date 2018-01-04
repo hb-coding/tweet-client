@@ -1,0 +1,14 @@
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+.sidebar{
+    height: 100%
+}
+
+.results-wrapper{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+}

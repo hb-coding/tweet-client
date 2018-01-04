@@ -1,0 +1,19 @@
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+.rule{
+    background-color: #1da1f2;
+    width: 72px;
+    height: 10px;
+}
+
+.search-title{
+    padding: 20px;
+}
+
+.search-button{
+    background-color: #1da1f2;
+    margin-top: 10px;
+}
