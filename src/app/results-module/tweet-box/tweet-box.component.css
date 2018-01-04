@@ -1,0 +1,17 @@
+.tweet{
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow: hidden;
+}
+.tweet-footer{
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+}
+
+.author{
+    margin-left: auto;
+}

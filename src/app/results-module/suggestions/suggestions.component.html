@@ -1,3 +1,5 @@
-<p>
-  suggestions works!
-</p>
+<div class="suggestion">
+  <div *ngFor="let tag of tags">
+    <a [routerLink]="['/results']" [queryParams]="{query: tag}">{{tag}}</a>
+  </div>
+</div>

@@ -1,3 +1,11 @@
-<p>
-  sidebar works!
-</p>
+<div class="sidebar">
+  <p>
+    Search Again
+  </p>
+  <div class="text-search">
+    <form class="search-form" (ngSubmit) = "executeSearch()">
+      <input type="text" name="searchTerms" class="form-control" [(ngModel)]="searchString" placeholder="enter your search terms">
+    </form>
+    <button type="button" class="search-button btn btn-primary" (click)="executeSearch()">Search</button>
+  </div>
+</div>
