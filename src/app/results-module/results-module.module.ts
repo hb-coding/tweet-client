@@ -5,10 +5,16 @@ import { ResultsComponent } from './results/results.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SuggestionsComponent } from './suggestions/suggestions.component';
 import { TweetBoxComponent } from './tweet-box/tweet-box.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    RouterModule,
+    ReactiveFormsModule
   ],
   declarations: [HeaderComponent, ResultsComponent, SidebarComponent, SuggestionsComponent, TweetBoxComponent]
 })

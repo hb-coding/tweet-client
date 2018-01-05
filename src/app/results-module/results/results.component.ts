@@ -4,6 +4,7 @@ import { SearchService } from '../../search-service/search-service.service';
 
 @Component({
   selector: 'app-results',
+  providers: [SearchService],
   templateUrl: './results.component.html',
   styleUrls: ['./results.component.css']
 })
