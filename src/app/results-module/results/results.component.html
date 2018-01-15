@@ -1,15 +1,15 @@
 <app-header [query]="terms"></app-header>
 <div class="results-wrapper">
   <div class="row">
-    <div class="sidebar col-3">
+    <div class="sidebar col-sm-3">
       <app-sidebar></app-sidebar>
     </div>
-    <div class="tweets col-6">
+    <div class="tweets col-sm-6">
       <div *ngFor="let tweet of result.statuses">
         <app-tweet-box [tweet]=tweet></app-tweet-box>
       </div>
     </div>
-    <div class="suggest col-3">
+    <div class="suggest col-sm-3">
       <app-suggestions [tags]="hashTagList"></app-suggestions>
     </div>
   </div>
