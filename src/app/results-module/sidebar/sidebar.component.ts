@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,6 +7,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent implements OnInit {
+
+  @Input() hello: String = 'hello';
+  @Output() emitMe: EventEmitter<String> = new EventEmitter;
+
   private searchString: String;
   private router: Router;
 
@@ -20,6 +24,10 @@ export class SidebarComponent implements OnInit {
 
   executeSearch() {
     this.router.navigate(['/results'], { queryParams: { query: this.searchString } });
+  }
+
+  sendEvent(){
+    this.emitMe.emit('hello! from sidebar');
   }
 
 }

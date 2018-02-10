@@ -2,7 +2,7 @@
 <div class="results-wrapper">
   <div class="row">
     <div class="sidebar col-sm-3">
-      <app-sidebar></app-sidebar>
+      <app-sidebar (emitMe)="heardEvent($event)"></app-sidebar>
     </div>
     <div class="tweets col-sm-6">
       <div *ngFor="let tweet of result.statuses">

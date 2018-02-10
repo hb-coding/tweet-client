@@ -446,6 +446,10 @@ export class ResultsComponent implements OnInit {
     })
   }
 
+  heardEvent(param){
+    console.log(param);
+  }
+
   buildHashTagList() {
     if (this.result && this.result.statuses) {
       this.result.statuses.forEach((status) => {
