@@ -1,9 +1,10 @@
 {
-    "name": "tweet-client-backend",
-    "version": "0.0.1",
-    "author": "Hayden Berge",
-    "dependencies": {
-      "body-parser": "^1.17.1",
-      "express": "^4.15.2"
-    }
+  "name": "tweet-client-backend",
+  "version": "0.0.1",
+  "author": "Hayden Berge",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "cors": "^2.8.4",
+    "express": "^4.15.2"
   }
+}

@@ -10,17 +10,16 @@ export class SearchService {
   private http: HttpClient;
   private url: string;
 
-  private token = 'AAAAAAAAAAAAAAAAAAAAAOL15AAAAAAAnmZhA0DeRRLOQpgCxLESCCHVXUE%3DOtdMfUImy97lB31J3chJWBh3vbR9qkHFTpgedNA2xdK4TKQxZX';
   
   constructor(router: Router, http: HttpClient) {
     this.router = router;
     this.http = http;
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type':  'application/json',
-        'Authorization': this.token
-      })
-    };
+    // const httpOptions = {
+    //   headers: new HttpHeaders({
+    //     'Content-Type':  'application/json',
+    //     'Authorization': this.token
+    //   })
+    // };
     this.url = "https://api.twitter.com/1.1/search/tweets.json";
    }
 
