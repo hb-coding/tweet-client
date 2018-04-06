@@ -33,6 +33,7 @@ router.route('/health-check').get(function (req, res) {
 });
 
 router.route('/twitter-test').get(function (req, res) {
+  let query = req.query.q;
   https.get(options, twitterResponse => {
     twitterResponse.setEncoding("utf8");
     let body = "";

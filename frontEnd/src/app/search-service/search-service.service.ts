@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Router} from '@angular/router';
-import {Observable} from 'rxjs';
+import {Observable, Subject} from 'rxjs';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 
@@ -9,23 +9,18 @@ export class SearchService {
   private router: Router;
   private http: HttpClient;
   private url: string;
-
+  public result: Subject<Object>;
   
   constructor(router: Router, http: HttpClient) {
     this.router = router;
     this.http = http;
-    // const httpOptions = {
-    //   headers: new HttpHeaders({
-    //     'Content-Type':  'application/json',
-    //     'Authorization': this.token
-    //   })
-    // };
-    this.url = "https://api.twitter.com/1.1/search/tweets.json";
+    this.result = new Subject();
+    this.url = "http://localhost:4000/api/v1/twitter-test";
    }
 
    doSearch(terms){
     return this.http.get(this.url+'?q='+terms).subscribe((result)=>{
-      console.log(result)
+      this.result.next(result);
     });
    }
 
