@@ -18,7 +18,7 @@ export class ResultsComponent implements OnInit {
   constructor(route: ActivatedRoute, searchService: SearchService) {
     this.searchService = searchService;
     this.route = route;
-
+    this.hashTagList = [];
     this.result = this.searchService.result;
   }
 
@@ -29,13 +29,10 @@ export class ResultsComponent implements OnInit {
     })
 
     this.searchService.result.subscribe((data)=>{
+      console.log(data)
       this.result = data;
       this.buildHashTagList();
     })
-  }
-
-  heardEvent(param){
-    console.log(param);
   }
 
   buildHashTagList() {

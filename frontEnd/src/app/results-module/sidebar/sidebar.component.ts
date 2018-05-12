@@ -26,8 +26,4 @@ export class SidebarComponent implements OnInit {
     this.router.navigate(['/results'], { queryParams: { query: this.searchString } });
   }
 
-  sendEvent(){
-    this.emitMe.emit('hello! from sidebar');
-  }
-
 }

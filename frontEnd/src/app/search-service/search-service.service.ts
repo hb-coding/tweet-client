@@ -19,6 +19,7 @@ export class SearchService {
    }
 
    doSearch(terms){
+     console.log(terms, 'hello');
     return this.http.get(this.url+'?q='+terms).subscribe((result)=>{
       this.result.next(result);
     });

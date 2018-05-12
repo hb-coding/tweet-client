@@ -9,11 +9,11 @@ const tokenObj = require('./tokenObj');
 
 const token = tokenObj.token;
 
-
-const options = {
+let path = '/1.1/search/tweets.json?q=';
+let options = {
   protocol: 'https:',
   hostname: "api.twitter.com",
-  path: '/1.1/search/tweets.json?q=rockies',
+  path: '',
   headers: {
     'Content-Type': 'application/json',
     'Authorization': 'Bearer '+token
@@ -33,7 +33,8 @@ router.route('/health-check').get(function (req, res) {
 });
 
 router.route('/twitter-test').get(function (req, res) {
-  let query = req.query.q;
+  let query = escape(req.query.q);
+  options.path = path += query;
   https.get(options, twitterResponse => {
     twitterResponse.setEncoding("utf8");
     let body = "";
