@@ -34,7 +34,7 @@ router.route('/health-check').get(function (req, res) {
 
 router.route('/twitter-test').get(function (req, res) {
   let query = escape(req.query.q);
-  options.path = path += query;
+  options.path = path + query;
   https.get(options, twitterResponse => {
     twitterResponse.setEncoding("utf8");
     let body = "";

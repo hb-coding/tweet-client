@@ -1,5 +1,8 @@
 <div class="suggestion">
+  <div class="suggestion-title">Top Hashtags Based on Query</div>
   <div *ngFor="let tag of tags">
-    <a [routerLink]="['/results']" [queryParams]="{query: tag}">{{tag}}</a>
+    <div class="hash-tag">
+      <a [routerLink]="['/results']" [queryParams]="{query: tag}">{{tag}}</a>
+    </div>
   </div>
 </div>

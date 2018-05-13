@@ -1,6 +1,15 @@
-.suggestions{
+.suggestion{
     height: 100%;
     border: 1px solid grey;
     border-radius: 5px;
     padding: 10px;
 }
+ .hash-tag{
+     padding-bottom: 10px;
+     font-size: 15px;
+ }
+
+ .suggestion-title{
+    font-size: 20px;
+    padding: 20px; 
+ }
